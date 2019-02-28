@@ -13,8 +13,6 @@
 		7961C9472228640000436E84 /* CSE335_FinalProject_DnD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7961C9452228640000436E84 /* CSE335_FinalProject_DnD.xcdatamodeld */; };
 		7961C9492228640100436E84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7961C9482228640100436E84 /* Assets.xcassets */; };
 		7961C94C2228640100436E84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7961C94A2228640100436E84 /* LaunchScreen.storyboard */; };
-		7961C9572228640100436E84 /* CSE335_FinalProject_DnDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961C9562228640100436E84 /* CSE335_FinalProject_DnDTests.swift */; };
-		7961C9622228640100436E84 /* CSE335_FinalProject_DnDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7961C9612228640100436E84 /* CSE335_FinalProject_DnDUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,11 +42,7 @@
 		7961C94B2228640100436E84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7961C94D2228640100436E84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7961C9522228640100436E84 /* CSE335-FinalProject-DnDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSE335-FinalProject-DnDTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7961C9562228640100436E84 /* CSE335_FinalProject_DnDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSE335_FinalProject_DnDTests.swift; sourceTree = "<group>"; };
-		7961C9582228640100436E84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7961C95D2228640100436E84 /* CSE335-FinalProject-DnDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CSE335-FinalProject-DnDUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7961C9612228640100436E84 /* CSE335_FinalProject_DnDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSE335_FinalProject_DnDUITests.swift; sourceTree = "<group>"; };
-		7961C9632228640100436E84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				7961C93D2228640000436E84 /* CSE335-FinalProject-DnD */,
-				7961C9552228640100436E84 /* CSE335-FinalProject-DnDTests */,
-				7961C9602228640100436E84 /* CSE335-FinalProject-DnDUITests */,
 				7961C93C2228640000436E84 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,24 +100,6 @@
 				7961C9452228640000436E84 /* CSE335_FinalProject_DnD.xcdatamodeld */,
 			);
 			path = "CSE335-FinalProject-DnD";
-			sourceTree = "<group>";
-		};
-		7961C9552228640100436E84 /* CSE335-FinalProject-DnDTests */ = {
-			isa = PBXGroup;
-			children = (
-				7961C9562228640100436E84 /* CSE335_FinalProject_DnDTests.swift */,
-				7961C9582228640100436E84 /* Info.plist */,
-			);
-			path = "CSE335-FinalProject-DnDTests";
-			sourceTree = "<group>";
-		};
-		7961C9602228640100436E84 /* CSE335-FinalProject-DnDUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7961C9612228640100436E84 /* CSE335_FinalProject_DnDUITests.swift */,
-				7961C9632228640100436E84 /* Info.plist */,
-			);
-			path = "CSE335-FinalProject-DnDUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7961C9572228640100436E84 /* CSE335_FinalProject_DnDTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7961C9622228640100436E84 /* CSE335_FinalProject_DnDUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
