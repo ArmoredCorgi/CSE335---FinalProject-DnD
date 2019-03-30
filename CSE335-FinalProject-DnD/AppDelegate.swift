@@ -1,22 +1,22 @@
 //
-//  AppDelegate.swift
-//  CSE335-FinalProject-DnD
-//
-//  Created by IgnitED Lab on 2/28/19.
 //  Copyright © 2019 Nicholas Jorgensen. All rights reserved.
 //
 
 import UIKit
 import CoreData
+import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Initialize sign-in
+        GIDSignIn.sharedInstance().clientID = "616489429731-4jkpk57bj8d38amc7bujib7p9s21el1r.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self
+        
         return true
     }
 
@@ -42,6 +42,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        //GIDSignIn handle url:
+        return GIDSignIn.sharedInstance().handle(url as URL?,
+                                                 sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+                                                 annotation: options[UIApplication.OpenURLOptionsKey.annotation])
+    }
+    
+    //For iOS 8 and earlier:
+    private func application(application: UIApplication,
+                     openURL url: URL, sourceApplication: String?, annotation: Any?) -> Bool {
+        var _: [String: AnyObject] = [UIApplication.OpenURLOptionsKey.sourceApplication.rawValue: sourceApplication as AnyObject,
+                                            UIApplication.OpenURLOptionsKey.annotation.rawValue: annotation as AnyObject]
+        return GIDSignIn.sharedInstance().handle(url,
+                                                    sourceApplication: sourceApplication,
+                                                    annotation: annotation)
     }
 
     // MARK: - Core Data stack
@@ -88,6 +106,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    // MARK: GIDSignInDelegate
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+        if let error = error {
+            print("\(error.localizedDescription)")
+        } else {
+            // Perform any operations on signed in user here.
+//            let userId = user.userID                  // For client-side use only!
+//            let idToken = user.authentication.idToken // Safe to send to the server
+//            let fullName = user.profile.name
+//            let givenName = user.profile.givenName
+//            let familyName = user.profile.familyName
+//            let email = user.profile.email
+            
+            self.window?.rootViewController!.performSegue(withIdentifier: "segueToAppTabs", sender: nil)
+        }
+    }
 
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
+              withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+    }
 }
 
