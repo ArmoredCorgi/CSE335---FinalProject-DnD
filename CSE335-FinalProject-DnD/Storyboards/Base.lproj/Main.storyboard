@@ -54,6 +54,9 @@
                                         <size key="value" width="0.0" height="2"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="rAF-IC-Pwh" kind="show" id="gh6-yi-aDU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -179,4 +182,7 @@
         <image name="settings-icon" width="45" height="45"/>
         <image name="summary-list-icon" width="45" height="45"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="gh6-yi-aDU"/>
+    </inferredMetricsTieBreakers>
 </document>
