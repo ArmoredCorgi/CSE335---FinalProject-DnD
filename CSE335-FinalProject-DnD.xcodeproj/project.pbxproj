@@ -20,6 +20,7 @@
 		9D66AF5C225007550037CDD9 /* PlayerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66AF5B225007550037CDD9 /* PlayerDetailViewController.swift */; };
 		9D66AF5E225034C20037CDD9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66AF5D225034C20037CDD9 /* Character.swift */; };
 		9D66AF6022503F340037CDD9 /* MonsterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66AF5F22503F340037CDD9 /* MonsterDetailViewController.swift */; };
+		9DC842FC22505F06004434BD /* BlackBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC842FB22505F06004434BD /* BlackBarView.swift */; };
 		9DD4C2C6223723F4003FF1F4 /* InitTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4C2C5223723F4003FF1F4 /* InitTrackerViewController.swift */; };
 		9DD4C2C822376223003FF1F4 /* CharacterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4C2C722376223003FF1F4 /* CharacterTableCell.swift */; };
 		9DD4C2CF22376C92003FF1F4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4C2CE22376C92003FF1F4 /* Player.swift */; };
@@ -75,6 +76,7 @@
 		9D66AF5B225007550037CDD9 /* PlayerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewController.swift; sourceTree = "<group>"; };
 		9D66AF5D225034C20037CDD9 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		9D66AF5F22503F340037CDD9 /* MonsterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterDetailViewController.swift; sourceTree = "<group>"; };
+		9DC842FB22505F06004434BD /* BlackBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBarView.swift; sourceTree = "<group>"; };
 		9DD4C2C5223723F4003FF1F4 /* InitTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitTrackerViewController.swift; sourceTree = "<group>"; };
 		9DD4C2C722376223003FF1F4 /* CharacterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableCell.swift; sourceTree = "<group>"; };
 		9DD4C2CE22376C92003FF1F4 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				9DD4C2CE22376C92003FF1F4 /* Player.swift */,
 				9DD4C2D022376F4F003FF1F4 /* Monster.swift */,
 				9D66AF5D225034C20037CDD9 /* Character.swift */,
+				9DC842FB22505F06004434BD /* BlackBarView.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				9D66AF5E225034C20037CDD9 /* Character.swift in Sources */,
 				7961C9472228640000436E84 /* CSE335_FinalProject_DnD.xcdatamodeld in Sources */,
 				9D66AF58224EF6BC0037CDD9 /* SettingsViewController.swift in Sources */,
+				9DC842FC22505F06004434BD /* BlackBarView.swift in Sources */,
 				9DD4C2CF22376C92003FF1F4 /* Player.swift in Sources */,
 				9D66AF6022503F340037CDD9 /* MonsterDetailViewController.swift in Sources */,
 				9D66AF5C225007550037CDD9 /* PlayerDetailViewController.swift in Sources */,

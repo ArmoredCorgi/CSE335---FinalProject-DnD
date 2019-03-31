@@ -22,23 +22,22 @@
                                 <rect key="frame" x="-319" y="20" width="781" height="545"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Initiative Tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdk-5b-Vf5">
-                                <rect key="frame" x="56" y="225" width="241" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v43-bb-zlh" customClass="GIDSignInButton">
-                                <rect key="frame" x="201" y="416" width="150" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v43-bb-zlh" customClass="GIDSignInButton">
+                                <rect key="frame" x="201" y="420" width="150" height="37"/>
                                 <color key="backgroundColor" red="1" green="0.90079272258217835" blue="0.28969590884233232" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="EaK-nU-l5V"/>
+                                    <constraint firstAttribute="height" constant="37" id="iDD-VV-qQb"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PK-t1-Q1R">
-                                <rect key="frame" x="205" y="472" width="142" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PK-t1-Q1R">
+                                <rect key="frame" x="205" y="476" width="142" height="38"/>
                                 <color key="backgroundColor" red="0.99204939603805542" green="0.99221879243850708" blue="0.99203866720199585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="142" id="OwB-Gw-6mk"/>
+                                    <constraint firstAttribute="height" constant="38" id="dv3-Tb-ZWA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="Don't Sign In">
                                     <color key="titleColor" red="0.46269190311431885" green="0.46277564764022827" blue="0.46268665790557861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -55,20 +54,53 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="rAF-IC-Pwh" kind="show" id="gh6-yi-aDU"/>
+                                    <segue destination="I4P-rS-FaP" kind="show" id="nFG-Fz-xTY"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Initiative Tracker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdk-5b-Vf5">
+                                <rect key="frame" x="55" y="209" width="264" height="48"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2PK-t1-Q1R" firstAttribute="top" secondItem="v43-bb-zlh" secondAttribute="bottom" constant="19" id="6nz-dX-Twl"/>
+                            <constraint firstItem="v43-bb-zlh" firstAttribute="top" secondItem="bdk-5b-Vf5" secondAttribute="bottom" constant="163" id="Hup-Lp-ziL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bdk-5b-Vf5" secondAttribute="trailing" symbolic="YES" id="NRg-NQ-CCf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v43-bb-zlh" secondAttribute="trailing" constant="24" id="OOy-Xq-xAL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2PK-t1-Q1R" secondAttribute="trailing" constant="28" id="aga-Iz-UEp"/>
+                            <constraint firstItem="2PK-t1-Q1R" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="bby-6R-lB2"/>
+                            <constraint firstItem="bdk-5b-Vf5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="189" id="e5h-m0-xfr"/>
+                            <constraint firstItem="bdk-5b-Vf5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="55" id="oMc-X1-s8W"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="br5-mn-eZs"/>
                     <connections>
-                        <segue destination="rAF-IC-Pwh" kind="show" identifier="segueToAppTabs" id="GWr-uV-Om5"/>
+                        <segue destination="I4P-rS-FaP" kind="show" identifier="segueToAppTabs" id="veL-fZ-ZYL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-263" y="199"/>
+            <point key="canvasLocation" x="-50" y="199"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yQR-vg-sQF">
+            <objects>
+                <navigationController id="I4P-rS-FaP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k8R-Ln-AFE">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rAF-IC-Pwh" kind="relationship" relationship="rootViewController" id="bgJ-kO-fl9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXY-zS-VrN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="199"/>
         </scene>
         <!--Tracker-->
         <scene sceneID="Y7q-aY-IF9">
@@ -96,37 +128,26 @@
                                     <outlet property="delegate" destination="Eio-BL-BF8" id="Ej7-nY-I1y"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xhF-QZ-kce">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="22"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Initiative Tracker" id="9fp-wq-LOb"/>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sW0-IZ-fkV" firstAttribute="leading" secondItem="1b9-Ur-C0U" secondAttribute="leading" id="6rw-JW-tgH"/>
                             <constraint firstItem="sW0-IZ-fkV" firstAttribute="trailing" secondItem="1b9-Ur-C0U" secondAttribute="trailing" id="FlV-P3-w3d"/>
-                            <constraint firstItem="xhF-QZ-kce" firstAttribute="trailing" secondItem="1b9-Ur-C0U" secondAttribute="trailing" id="Fua-CG-JLt"/>
-                            <constraint firstItem="xhF-QZ-kce" firstAttribute="top" secondItem="1b9-Ur-C0U" secondAttribute="top" id="QrX-bc-1N8"/>
+                            <constraint firstItem="sW0-IZ-fkV" firstAttribute="top" secondItem="1b9-Ur-C0U" secondAttribute="top" id="hjn-9D-07F"/>
                             <constraint firstItem="sW0-IZ-fkV" firstAttribute="bottom" secondItem="1b9-Ur-C0U" secondAttribute="bottom" id="ijt-B5-O11"/>
-                            <constraint firstItem="sW0-IZ-fkV" firstAttribute="top" secondItem="xhF-QZ-kce" secondAttribute="bottom" id="npl-e2-4aN"/>
-                            <constraint firstItem="xhF-QZ-kce" firstAttribute="leading" secondItem="1b9-Ur-C0U" secondAttribute="leading" id="yEc-qo-Ujv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1b9-Ur-C0U"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Tracker" image="summary-list-icon" id="Mm3-f5-n7g"/>
                     <connections>
                         <outlet property="initiativeTable" destination="sW0-IZ-fkV" id="PwX-6Q-uL4"/>
-                        <outlet property="navBar" destination="xhF-QZ-kce" id="Bft-b0-aCZ"/>
+                        <segue destination="aeO-ID-X2D" kind="show" identifier="segueToMonsterDetail" id="Qp0-wK-BeU"/>
+                        <segue destination="NZC-05-tsR" kind="show" identifier="segueToPlayerDetail" id="MVS-pK-Gvh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="33S-G4-96G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1588" y="-233"/>
+            <point key="canvasLocation" x="2527.1999999999998" y="-233.43328335832086"/>
         </scene>
         <!--Player Detail View Controller-->
         <scene sceneID="2uk-SZ-2st">
@@ -141,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nBA-oh-Jux" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2374" y="-1217"/>
+            <point key="canvasLocation" x="3644" y="-949"/>
         </scene>
         <!--Monster Detail View Controller-->
         <scene sceneID="VqN-XZ-rLI">
@@ -156,12 +177,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MgD-Al-OQ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2374" y="-502"/>
+            <point key="canvasLocation" x="3644" y="-233"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="nPS-vi-cdg">
             <objects>
                 <tabBarController id="rAF-IC-Pwh" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="JLg-7A-hS1"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="t9M-Ef-VJh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -175,7 +197,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVJ-Aq-t0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="521" y="200"/>
+            <point key="canvasLocation" x="1460" y="199.25037481259372"/>
         </scene>
         <!--Database-->
         <scene sceneID="l5c-hI-cTy">
@@ -184,15 +206,6 @@
                     <view key="view" contentMode="scaleToFill" id="xB0-Qs-Gox">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Database" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ki6-Fu-aDs">
-                                <rect key="frame" x="121" y="94" width="132" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Eph-e7-aUE"/>
                     </view>
@@ -200,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ck5-jR-lyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1588" y="651"/>
+            <point key="canvasLocation" x="2527.1999999999998" y="650.82458770614699"/>
         </scene>
         <!--Settings-->
         <scene sceneID="C9a-dD-ve9">
@@ -216,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZ1-1c-hfC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2375" y="199"/>
+            <point key="canvasLocation" x="2527" y="1474"/>
         </scene>
     </scenes>
     <resources>
@@ -226,6 +239,6 @@
         <image name="summary-list-icon" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gh6-yi-aDU"/>
+        <segue reference="veL-fZ-ZYL"/>
     </inferredMetricsTieBreakers>
 </document>
