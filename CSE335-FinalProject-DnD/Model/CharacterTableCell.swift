@@ -14,9 +14,4 @@ class CharacterTableCell : UITableViewCell {
     @IBOutlet weak var backgroundHPBar: UIView!
     @IBOutlet weak var currentHPBar: UIView!
     
-    
-    var initiative : Int?
-    var name : String?
-    var maxHP : Int?
-    var currHP : Int?
 }
