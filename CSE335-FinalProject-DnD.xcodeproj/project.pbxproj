@@ -16,9 +16,12 @@
 		7961C94C2228640100436E84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7961C94A2228640100436E84 /* LaunchScreen.storyboard */; };
 		9D66AF56224ED3C20037CDD9 /* DatabaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66AF55224ED3C20037CDD9 /* DatabaseViewController.swift */; };
 		9D66AF58224EF6BC0037CDD9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66AF57224EF6BC0037CDD9 /* SettingsViewController.swift */; };
+		9D66AF5A224F09760037CDD9 /* CharacterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D66AF59224F09760037CDD9 /* CharacterTableCell.xib */; };
+		9D66AF5C225007550037CDD9 /* PlayerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66AF5B225007550037CDD9 /* PlayerDetailViewController.swift */; };
+		9D66AF5E225034C20037CDD9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66AF5D225034C20037CDD9 /* Character.swift */; };
+		9D66AF6022503F340037CDD9 /* MonsterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66AF5F22503F340037CDD9 /* MonsterDetailViewController.swift */; };
 		9DD4C2C6223723F4003FF1F4 /* InitTrackerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4C2C5223723F4003FF1F4 /* InitTrackerViewController.swift */; };
 		9DD4C2C822376223003FF1F4 /* CharacterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4C2C722376223003FF1F4 /* CharacterTableCell.swift */; };
-		9DD4C2CA22376777003FF1F4 /* HPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4C2C922376777003FF1F4 /* HPView.swift */; };
 		9DD4C2CF22376C92003FF1F4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4C2CE22376C92003FF1F4 /* Player.swift */; };
 		9DD4C2D122376F4F003FF1F4 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD4C2D022376F4F003FF1F4 /* Monster.swift */; };
 /* End PBXBuildFile section */
@@ -68,9 +71,12 @@
 		9C7B39D5AC3F5BF5E2EDA157 /* Pods-CSE335-FinalProject-DnD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CSE335-FinalProject-DnD.release.xcconfig"; path = "Target Support Files/Pods-CSE335-FinalProject-DnD/Pods-CSE335-FinalProject-DnD.release.xcconfig"; sourceTree = "<group>"; };
 		9D66AF55224ED3C20037CDD9 /* DatabaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseViewController.swift; sourceTree = "<group>"; };
 		9D66AF57224EF6BC0037CDD9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9D66AF59224F09760037CDD9 /* CharacterTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterTableCell.xib; sourceTree = "<group>"; };
+		9D66AF5B225007550037CDD9 /* PlayerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewController.swift; sourceTree = "<group>"; };
+		9D66AF5D225034C20037CDD9 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		9D66AF5F22503F340037CDD9 /* MonsterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterDetailViewController.swift; sourceTree = "<group>"; };
 		9DD4C2C5223723F4003FF1F4 /* InitTrackerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitTrackerViewController.swift; sourceTree = "<group>"; };
 		9DD4C2C722376223003FF1F4 /* CharacterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableCell.swift; sourceTree = "<group>"; };
-		9DD4C2C922376777003FF1F4 /* HPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HPView.swift; sourceTree = "<group>"; };
 		9DD4C2CE22376C92003FF1F4 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		9DD4C2D022376F4F003FF1F4 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		C4E61ADF0D399AA87C4296AD /* Pods_CSE335_FinalProject_DnD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CSE335_FinalProject_DnD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,7 +150,7 @@
 			children = (
 				7961C93E2228640000436E84 /* AppDelegate.swift */,
 				9DD4C2CD223767F5003FF1F4 /* Controllers */,
-				9DD4C2CC223767DF003FF1F4 /* Storyboards */,
+				9DD4C2CC223767DF003FF1F4 /* View */,
 				9DD4C2CB223767CD003FF1F4 /* Model */,
 				7961C9482228640100436E84 /* Assets.xcassets */,
 				7961C94D2228640100436E84 /* Info.plist */,
@@ -157,20 +163,21 @@
 			isa = PBXGroup;
 			children = (
 				9DD4C2C722376223003FF1F4 /* CharacterTableCell.swift */,
-				9DD4C2C922376777003FF1F4 /* HPView.swift */,
 				9DD4C2CE22376C92003FF1F4 /* Player.swift */,
 				9DD4C2D022376F4F003FF1F4 /* Monster.swift */,
+				9D66AF5D225034C20037CDD9 /* Character.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		9DD4C2CC223767DF003FF1F4 /* Storyboards */ = {
+		9DD4C2CC223767DF003FF1F4 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				7961C9422228640000436E84 /* Main.storyboard */,
 				7961C94A2228640100436E84 /* LaunchScreen.storyboard */,
+				9D66AF59224F09760037CDD9 /* CharacterTableCell.xib */,
 			);
-			path = Storyboards;
+			path = View;
 			sourceTree = "<group>";
 		};
 		9DD4C2CD223767F5003FF1F4 /* Controllers */ = {
@@ -180,6 +187,8 @@
 				9DD4C2C5223723F4003FF1F4 /* InitTrackerViewController.swift */,
 				9D66AF55224ED3C20037CDD9 /* DatabaseViewController.swift */,
 				9D66AF57224EF6BC0037CDD9 /* SettingsViewController.swift */,
+				9D66AF5B225007550037CDD9 /* PlayerDetailViewController.swift */,
+				9D66AF5F22503F340037CDD9 /* MonsterDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -295,6 +304,7 @@
 				7961C94C2228640100436E84 /* LaunchScreen.storyboard in Resources */,
 				7961C9492228640100436E84 /* Assets.xcassets in Resources */,
 				7961C9442228640000436E84 /* Main.storyboard in Resources */,
+				9D66AF5A224F09760037CDD9 /* CharacterTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,10 +402,12 @@
 			files = (
 				9DD4C2D122376F4F003FF1F4 /* Monster.swift in Sources */,
 				7961C9412228640000436E84 /* TitleViewController.swift in Sources */,
+				9D66AF5E225034C20037CDD9 /* Character.swift in Sources */,
 				7961C9472228640000436E84 /* CSE335_FinalProject_DnD.xcdatamodeld in Sources */,
 				9D66AF58224EF6BC0037CDD9 /* SettingsViewController.swift in Sources */,
 				9DD4C2CF22376C92003FF1F4 /* Player.swift in Sources */,
-				9DD4C2CA22376777003FF1F4 /* HPView.swift in Sources */,
+				9D66AF6022503F340037CDD9 /* MonsterDetailViewController.swift in Sources */,
+				9D66AF5C225007550037CDD9 /* PlayerDetailViewController.swift in Sources */,
 				9DD4C2C822376223003FF1F4 /* CharacterTableCell.swift in Sources */,
 				7961C93F2228640000436E84 /* AppDelegate.swift in Sources */,
 				9DD4C2C6223723F4003FF1F4 /* InitTrackerViewController.swift in Sources */,

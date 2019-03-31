@@ -4,7 +4,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class PlayerDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

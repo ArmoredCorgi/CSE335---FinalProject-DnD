@@ -4,7 +4,7 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class MonsterDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
