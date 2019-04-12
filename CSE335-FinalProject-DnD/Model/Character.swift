@@ -12,14 +12,15 @@ class Character : NSObject {
     var ac : Int?
     var pp : Int?
     var conditions : [String]?
+    var image : Data?
     
-    init(initiative: Int?, name: String?, maxHP : Int?, ac : Int?, pp : Int?) {
+    init(initiative: Int?, name: String?, maxHP : Int?, ac : Int?, pp : Int?, image: Data?) {
         self.initiative = initiative
         self.name = name
         self.maxHP = maxHP
         self.currHP = maxHP
         self.ac = ac
         self.pp = pp
-        
+        self.image = image
     }
 }

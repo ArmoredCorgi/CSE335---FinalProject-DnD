@@ -3,6 +3,7 @@
 //
 
 import UIKit
+import CoreData
 
 struct charStruct {
     var isOpened : Bool
@@ -20,8 +21,8 @@ class InitTrackerViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var initiativeTable: UITableView!
     
     // MARK: Variables
-    let player1 : Player = Player(initiative: 16, name: "Player1", className: "Paladin", maxHP: 30, ac: 14, pp: 14)
-    let player2 : Player = Player(initiative: 12, name: "Player2", className: "Cleric", maxHP: 36, ac: 17, pp: 18)
+    let player1 : Player = Player(initiative: 16, name: "Player1", className: "Paladin", maxHP: 30, ac: 14, pp: 14, image: UIImage(named: "paladin")?.pngData())
+    let player2 : Player = Player(initiative: 12, name: "Player2", className: "Cleric", maxHP: 36, ac: 17, pp: 18, image: UIImage(named: "cleric")?.pngData())
     var charList = [charStruct]()
     var selectedChar : Character!
     
@@ -37,11 +38,48 @@ class InitTrackerViewController: UIViewController, UITableViewDelegate, UITableV
         
         self.charList = [charStruct(isOpened: false, charInfo: player1),
                          charStruct(isOpened: false, charInfo: player2)]
+        
+        //Core Data:
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let newPlayer1 = NSEntityDescription.insertNewObject(forEntityName: "PlayerEntity", into: managedContext)
+        newPlayer1.setValue(player1.name!, forKey: "name")
+        newPlayer1.setValue(player1.className!, forKey: "charClass")
+        newPlayer1.setValue(player1.image!, forKey: "image")
+        newPlayer1.setValue(player1.initiative!, forKey: "initiative")
+        newPlayer1.setValue(player1.maxHP!, forKey: "maxHP")
+        newPlayer1.setValue(player1.pp!, forKey: "pp")
+        
+        let newPlayer2 = NSEntityDescription.insertNewObject(forEntityName: "PlayerEntity", into: managedContext)
+        newPlayer2.setValue(player2.name!, forKey: "name")
+        newPlayer2.setValue(player2.className!, forKey: "charClass")
+        newPlayer2.setValue(player2.image!, forKey: "image")
+        newPlayer2.setValue(player2.initiative!, forKey: "initiative")
+        newPlayer2.setValue(player2.maxHP!, forKey: "maxHP")
+        newPlayer2.setValue(player2.pp!, forKey: "pp")
+        
+        do {
+            try managedContext.save()
+            print("Saved")
+        } catch {
+            print("ERROR: saving failed")
+        }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reloadTable), name: NSNotification.Name(rawValue: "reloadTableNotif") , object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.topItem?.title = "Initiative Tracker"
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "AvenirNext-DemiBold", size: 24)!]
+        
+        for char in charList {
+            if (char.charInfo.currHP! > char.charInfo.maxHP!) {
+                char.charInfo.currHP! = char.charInfo.maxHP!
+            }
+        }
+        
+        initiativeTable.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,19 +114,12 @@ class InitTrackerViewController: UIViewController, UITableViewDelegate, UITableV
             let character = charList[indexPath.section].charInfo
             cell.initiativeLabel.text = String(character.initiative!)
             cell.nameLabel.text = character.name
+            cell.imageView!.image = UIImage(data: character.image!)
             cell.hpLabel.text = String(character.currHP!) + " / " + String(character.maxHP!)
             let currHPPercent = Float(character.currHP!) / Float(character.maxHP!)
-            let widthOffset : CGFloat = 12.5 //Offsetting background width (the widthConstraint is setting the width of the hp bar 12.5 pts wider than it should be)
-            let bgWidth = cell.backgroundHPBar.frame.width - widthOffset
+            let bgWidth = cell.backgroundHPBar.frame.width
             let currHPWidth = bgWidth * CGFloat(currHPPercent)
-            let widthConstraint = NSLayoutConstraint(item: cell.currentHPBar,
-                                                     attribute: NSLayoutConstraint.Attribute.width,
-                                                     relatedBy: NSLayoutConstraint.Relation.equal,
-                                                     toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute,
-                                                     multiplier: 1,
-                                                     constant: currHPWidth)
-
-            cell.currentHPBar.addConstraint(widthConstraint)
+            cell.currHPWidth.constant = currHPWidth
             cell.updateConstraints()
             
             return cell
@@ -99,6 +130,13 @@ class InitTrackerViewController: UIViewController, UITableViewDelegate, UITableV
             cell.selectionStyle = UITableViewCell.SelectionStyle.none
             
             cell.character = charList[indexPath.section].charInfo
+            cell.bliButton.isHidden = cell.character!.conditions?.firstIndex(of: "Blinded") == nil
+            cell.chaButton.isHidden = cell.character!.conditions?.firstIndex(of: "Charmed") == nil
+            cell.deafButton.isHidden = cell.character!.conditions?.firstIndex(of: "Deafened") == nil
+            cell.friButton.isHidden = cell.character!.conditions?.firstIndex(of: "Frightened") == nil
+            cell.grapButton.isHidden = cell.character!.conditions?.firstIndex(of: "Grappled") == nil
+            cell.invButton.isHidden = cell.character!.conditions?.firstIndex(of: "Invisible") == nil
+            
             cell.delegate = self
             
             return cell
@@ -146,5 +184,11 @@ class InitTrackerViewController: UIViewController, UITableViewDelegate, UITableV
             selectedChar = character
             performSegue(withIdentifier: "segueToMonsterDetail", sender: self)
         }
+    }
+    
+    // MARK: Private Methods
+    
+    @objc func reloadTable() {
+        initiativeTable.reloadData()
     }
 }
