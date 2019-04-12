@@ -20,6 +20,8 @@
 		9D66AF5C225007550037CDD9 /* PlayerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66AF5B225007550037CDD9 /* PlayerDetailViewController.swift */; };
 		9D66AF5E225034C20037CDD9 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66AF5D225034C20037CDD9 /* Character.swift */; };
 		9D66AF6022503F340037CDD9 /* MonsterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66AF5F22503F340037CDD9 /* MonsterDetailViewController.swift */; };
+		9D81AE7A2260222200322184 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81AE792260222200322184 /* AboutViewController.swift */; };
+		9D81AE7E2260226000322184 /* StoreSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D81AE7D2260226000322184 /* StoreSearchViewController.swift */; };
 		9DC842FC22505F06004434BD /* BlackBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC842FB22505F06004434BD /* BlackBarView.swift */; };
 		9DC842FE2250749E004434BD /* CharacterDetailTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DC842FD2250749E004434BD /* CharacterDetailTableCell.xib */; };
 		9DC8430022507519004434BD /* CharacterDetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC842FF22507519004434BD /* CharacterDetailTableCell.swift */; };
@@ -78,6 +80,8 @@
 		9D66AF5B225007550037CDD9 /* PlayerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewController.swift; sourceTree = "<group>"; };
 		9D66AF5D225034C20037CDD9 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		9D66AF5F22503F340037CDD9 /* MonsterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonsterDetailViewController.swift; sourceTree = "<group>"; };
+		9D81AE792260222200322184 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		9D81AE7D2260226000322184 /* StoreSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSearchViewController.swift; sourceTree = "<group>"; };
 		9DC842FB22505F06004434BD /* BlackBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBarView.swift; sourceTree = "<group>"; };
 		9DC842FD2250749E004434BD /* CharacterDetailTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailTableCell.xib; sourceTree = "<group>"; };
 		9DC842FF22507519004434BD /* CharacterDetailTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailTableCell.swift; sourceTree = "<group>"; };
@@ -168,12 +172,12 @@
 		9DD4C2CB223767CD003FF1F4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9DD4C2C722376223003FF1F4 /* CharacterTableCell.swift */,
-				9DC842FF22507519004434BD /* CharacterDetailTableCell.swift */,
-				9DD4C2CE22376C92003FF1F4 /* Player.swift */,
-				9DD4C2D022376F4F003FF1F4 /* Monster.swift */,
-				9D66AF5D225034C20037CDD9 /* Character.swift */,
 				9DC842FB22505F06004434BD /* BlackBarView.swift */,
+				9D66AF5D225034C20037CDD9 /* Character.swift */,
+				9DC842FF22507519004434BD /* CharacterDetailTableCell.swift */,
+				9DD4C2C722376223003FF1F4 /* CharacterTableCell.swift */,
+				9DD4C2D022376F4F003FF1F4 /* Monster.swift */,
+				9DD4C2CE22376C92003FF1F4 /* Player.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,12 +196,14 @@
 		9DD4C2CD223767F5003FF1F4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7961C9402228640000436E84 /* TitleViewController.swift */,
-				9DD4C2C5223723F4003FF1F4 /* InitTrackerViewController.swift */,
+				9D81AE792260222200322184 /* AboutViewController.swift */,
 				9D66AF55224ED3C20037CDD9 /* DatabaseViewController.swift */,
-				9D66AF57224EF6BC0037CDD9 /* SettingsViewController.swift */,
-				9D66AF5B225007550037CDD9 /* PlayerDetailViewController.swift */,
+				9DD4C2C5223723F4003FF1F4 /* InitTrackerViewController.swift */,
 				9D66AF5F22503F340037CDD9 /* MonsterDetailViewController.swift */,
+				9D66AF5B225007550037CDD9 /* PlayerDetailViewController.swift */,
+				9D66AF57224EF6BC0037CDD9 /* SettingsViewController.swift */,
+				9D81AE7D2260226000322184 /* StoreSearchViewController.swift */,
+				7961C9402228640000436E84 /* TitleViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -413,12 +419,14 @@
 				9DD4C2D122376F4F003FF1F4 /* Monster.swift in Sources */,
 				7961C9412228640000436E84 /* TitleViewController.swift in Sources */,
 				9D66AF5E225034C20037CDD9 /* Character.swift in Sources */,
+				9D81AE7A2260222200322184 /* AboutViewController.swift in Sources */,
 				7961C9472228640000436E84 /* CSE335_FinalProject_DnD.xcdatamodeld in Sources */,
 				9D66AF58224EF6BC0037CDD9 /* SettingsViewController.swift in Sources */,
 				9DC842FC22505F06004434BD /* BlackBarView.swift in Sources */,
 				9DD4C2CF22376C92003FF1F4 /* Player.swift in Sources */,
 				9D66AF6022503F340037CDD9 /* MonsterDetailViewController.swift in Sources */,
 				9D66AF5C225007550037CDD9 /* PlayerDetailViewController.swift in Sources */,
+				9D81AE7E2260226000322184 /* StoreSearchViewController.swift in Sources */,
 				9DC8430022507519004434BD /* CharacterDetailTableCell.swift in Sources */,
 				9DD4C2C822376223003FF1F4 /* CharacterTableCell.swift in Sources */,
 				7961C93F2228640000436E84 /* AppDelegate.swift in Sources */,
